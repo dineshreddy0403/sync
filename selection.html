@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <link rel="stylesheet" href="selectionstyle.css">
+</head>
+<body>
+    <header>
+        <h1>Course Selection</h1>
+    </header>
+    <section>
+        <h2>Select Theory Course</h2>
+        <select id="theory-courses" onchange="populateTheoryTeachers()">
+            <option value="">-- Select a Theory Course --</option>
+        </select>
+        <div id="theory-teacher-list"></div>
+
+        <h2>Select Lab Course</h2>
+        <select id="lab-courses" onchange="populateLabTeachers()">
+            <option value="">-- Select a Lab Course --</option>
+        </select>
+        <div id="lab-teacher-list"></div>
+
+        <div id="teacher-profile-section" style="display:none;">
+            <h2>Teacher Profile</h2>
+            <div id="teacher-profile"></div>
+            <label>
+                <input type="checkbox" id="select-course" /> Select this course
+            </label>
+        </div>
+
+        <button onclick="submitSelection()">Submit Selection</button>
+    </section>
+    <script src="course-selection.js"></script>
+</body>
+</html>
